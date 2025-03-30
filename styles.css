@@ -1,3 +1,21 @@
+@font-face {
+    font-family: 'DKHANDS';
+    src: url('fonts/DK-Hand.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'EXTREME';
+    src: url('fonts/Extreme\ Fire.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'HANDVES';
+    src: url('fonts/Handves.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
 * {
     background-color: blanchedalmond;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -7,6 +25,16 @@
     background-color: skyblue;
     display: grid;
     grid-template: 80px 80px / 130px 130px 130px 130px 130px;
+}
+#chics, #xsign {
+    font-family: 'EXTREME', sans-serif;
+    font-size: 22px;
+    margin-top: 30px;
+}
+#nans, #osign {
+    font-family: 'HANDVES', sans-serif;
+    font-size: 22px;
+    margin-top: 25px;
 }
 .board {
     position: relative;
@@ -23,7 +51,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 80px;
+    font-family: 'DKHANDS';
+    font-size: 150px;
 }
 .players button {
     background-color: blueviolet;
@@ -37,8 +66,9 @@
 }
 .players div {
     justify-content: center;
-    margin-top: 30px;
     background-color: skyblue;
+    margin-left: 15px;
+    align-items: center;
     
 }
 #reset {
