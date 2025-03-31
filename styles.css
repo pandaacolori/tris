@@ -36,6 +36,10 @@
     font-size: 22px;
     margin-top: 25px;
 }
+#xsign, #osign {
+    justify-self: center;
+    font-family: 'DKHANDS', sans-serif;
+}
 .board {
     position: relative;
     top: 10px;
