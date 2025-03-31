@@ -14,8 +14,25 @@ const playero = document.querySelector(".playerTwo")
     const playerDiv = document.querySelector("#nans");
     playerDiv.innerText = secondPlayer;
 });
+
+function cleanBoard() {
+  gridAll.forEach(cell => {
+    cell.innerText = ""
+    board = ["", "", "", "", "", "", "", "", ""];
+    cell.addEventListener("click", clickFunction, {once:true});
+    })
+}
+
+
 const winCondition = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 let board = ["", "", "", "", "", "", "", "", ""];
+
+function checkDraw() {
+    if (board.every(cell => cell !== "")) {
+      alert("Pareggio. Ma è possibile vincere a tris?"); 
+      cleanBoard() 
+        }
+    }
 
 function checkWinCondition() {
   for (let winnies of winCondition) { 
@@ -25,10 +42,16 @@ function checkWinCondition() {
       if (xTurn) {
         const winnerName = document.querySelector("#chics").innerText
         alert(winnerName + " vince!");
+        cleanBoard()
+
+
       }
       else {
         const winnerName = document.querySelector("#nans").innerText
         alert(winnerName + " vince!")
+        cleanBoard()
+        
+        
       }
       return true;
     }
@@ -49,23 +72,23 @@ function clickFunction(e) {
     target.innerText = "X";
     board[index] = "X";
     checkWinCondition();
-  } else {
+    checkDraw();
+  } 
+  else {
     target.innerText = "O";
     board[index] = "O";
     checkWinCondition();
+    checkDraw();
   }
   console.log(board)
   xTurn = !xTurn;
 }
+
+
 /*RESET BUTTON*/
 reset.addEventListener("click",() => {
-  gridAll.forEach(cell => {
-    cell.innerText = ""
-    board = ["", "", "", "", "", "", "", "", ""];
-    cell.addEventListener("click", clickFunction, {once:true});
-    })
+  cleanBoard()
   xturn=true;
-
 }
 )
 
