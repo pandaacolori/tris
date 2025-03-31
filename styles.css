@@ -12,7 +12,7 @@
   }
 @font-face {
     font-family: 'HANDVES';
-    src: url('fonts/Handves.ttf') format('truetype');
+    src: url('fonts/Circle.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
   }
@@ -46,7 +46,6 @@
 .board {
     position: relative;
     top: 10px;
-    left: 400px;
     display: grid;
     grid-template: 100px 100px 100px / 100px 100px 100px;
     grid-auto-rows: 100px;
@@ -88,4 +87,30 @@
     background-color: black;
     border-radius: 10% 10% 10% 10%;
     border: 2px solid white;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.imgContLeft {
+    width: 299px;
+    height: 299px;
+    float: left;
+    margin-top: 11px;
+    margin-left: 60px;
+    margin-right: 50px;
+}
+.imgContRight {
+    width: 299px;
+    height: 299px;
+    float: right;
+    margin-top: 11px;
+    margin-left: 60px;
+}
+
+.main {
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: space-evenly;
 }
