@@ -28,17 +28,20 @@
 }
 #chics, #xsign {
     font-family: 'EXTREME', sans-serif;
-    font-size: 22px;
-    margin-top: 30px;
+    font-size: 30px;
+    margin-top: 25px;
 }
 #nans, #osign {
     font-family: 'HANDVES', sans-serif;
-    font-size: 22px;
+    font-size: 30px;
     margin-top: 25px;
 }
 #xsign, #osign {
-    justify-self: center;
+    justify-self: end;
     font-family: 'DKHANDS', sans-serif;
+    margin-top: 17px;
+    font-size: 40px;
+    margin-right: 5px;
 }
 .board {
     position: relative;
@@ -73,6 +76,7 @@
     background-color: skyblue;
     margin-left: 15px;
     align-items: center;
+    text-wrap: nowrap;
     
 }
 #reset {
